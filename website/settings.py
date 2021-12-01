@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&%@*h8!o$$bksde_(-0s6t8^4hluvauc)-l!5^5=rrmw^sm&m7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://floorplanproject.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','objectremove.herokuapp.com']
 
 
 # Application definition
