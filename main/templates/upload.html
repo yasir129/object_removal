@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Page</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static '/css/upload.css' %}">
+</head>
+<body>
+	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<img class="background" src="{% static '/assets/floor.jpg' %}"/>
+	<div class="container">
+	<div class="file-upload">
+  	  <form action="model" method="post" enctype="multipart/form-data">
+  	  	  {% csrf_token %}
+		  <div class="image-upload-wrap">
+		    <input class="file-upload-input" name="upload" type='file' accept="image/*" />
+		    <div class="drag-text">
+		      <h3>Drag and drop a file or select add Image</h3>
+		    </div>
+		  </div>
+		  <button class="file-upload-btn" name="MODEL_MAKER" type="submit">CLICK HERE TO TRANSFORM INTO 3D</button>
+	  </form>
+	</div>
+</div>
+</body>
+</html>
