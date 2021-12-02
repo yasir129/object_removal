@@ -25,9 +25,9 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = None
 SECRET_KEY = 'django-insecure-&%@*h8!o$$bksde_(-0s6t8^4hluvauc)-l!5^5=rrmw^sm&m7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','objectremove.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://objectremove.herokuapp.com/']
 
 
 # Application definition
