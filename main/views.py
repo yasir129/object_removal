@@ -130,18 +130,12 @@ def index(request):
         temp = request.POST.get("upload")
         nparr = np.fromstring(base64.b64decode(temp), np.uint8)
         img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        url_image = os.path.join(BASE_DIR,"main/media", "waka"+str(number)+".png");
-        cv2.imwrite(url_image, img)
         temp = request.POST.get("mask")
         nparr = np.fromstring(base64.b64decode(temp), np.uint8)
         mask = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        url_mask = os.path.join(BASE_DIR,"main/media", "mask"+str(number)+".png");
-        cv2.imwrite(url_mask, mask)
     else:
         return redirect('./')
     torch.cuda.empty_cache() 
-    img = io.imread(url_image)
-    mask = io.imread(url_mask)
     if len(mask.shape) != 3:
         mask = mask[..., np.newaxis]
 
