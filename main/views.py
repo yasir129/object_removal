@@ -150,7 +150,7 @@ def index(request):
     # mask = pad_image(mask)
 
     DFNet_model = DFNet().to(device)
-    DFNet_model.load_state_dict(torch.load(ROOT_DIR+'/weights/model_places2.pth', map_location=device))
+    DFNet_model.load_state_dict(torch.load(os.path.join(ROOT_DIR, 'weights/model_places2.pth'), map_location=device))
     DFNet_model.eval()
     DFNET_output = preprocess_image_dfnet(image, mask, DFNet_model)
     # Refinement_model = RefinementNet().to(device)
